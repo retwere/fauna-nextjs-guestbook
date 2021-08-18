@@ -178,7 +178,7 @@ const main = async () => {
     return console.error("Fauna resources were not created.");
   }
 
-  console.log(await client.query(Q.Call(Q.Function("listLatestEntries", [10]))))
+  console.log(await client.query(Q.Call(Q.Function("listLatestEntries"), [10])))
 
   if (process.env.FAUNA_ADMIN_KEY) {
     // Assume it's a Vercel environment, no need for .env.local file
