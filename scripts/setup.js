@@ -169,7 +169,7 @@ const main = async () => {
     MakeListLatestEntriesUdf,
     MakeGuestbookRole,
   ]) {
-    await client.query(Make());
+    console.log(await client.query(Make()));
   }
 
   if (await isDatabasePrepared({ client })) {
